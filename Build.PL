@@ -2,9 +2,9 @@ use strict;
 use Module::Build;
 
 my $build = Module::Build
-  ->new( module_name    => "Bot::BasicBot::Pluggable::Module::Search",
+  ->new( module_name    => "Bot::BasicBot::Pluggable::Module::Network",
          license        => 'perl',
-         dist_version   => '0.8',
+         dist_version   => '0.9',
          dist_author   => 'Simon Wistow <simon@thegestalt.org>',
          dist_abstract => 'various network plugins for Bot::BasicBot::Pluggable',
          requires       => {

@@ -2,7 +2,7 @@
 use ExtUtils::MakeMaker;
 WriteMakefile
 (
-          'NAME' => 'Bot::BasicBot::Pluggable::Module::Search',
+          'NAME' => 'Bot::BasicBot::Pluggable::Module::Network',
           'VERSION' => '0.8',
           'PREREQ_PM' => {
                            'Bot::BasicBot::Pluggable' => '0.5',
