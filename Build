@@ -1,0 +1,38 @@
+#! /usr/local/perl580/bin/perl5.8.0
+
+use strict;
+use Cwd;
+use File::Spec;
+
+BEGIN {
+  $^W = 1;  # Use warnings
+  my $curdir = File::Spec->canonpath( Cwd::cwd() );
+  unless ($curdir eq '/home/simon/projects/bots/Bot-BasicBot-Pluggable-Module-Network') {
+    die ('This script must be run from /home/simon/projects/bots/Bot-BasicBot-Pluggable-Module-Network, not '."$curdir\n".
+	 "Please re-run the Build.PL script here.\n");
+  }
+  @INC = 
+    (
+     '/usr/local/perl580/lib/5.8.0/i686-linux',
+     '/usr/local/perl580/lib/5.8.0',
+     '/usr/local/perl580/lib/site_perl/5.8.0/i686-linux',
+     '/usr/local/perl580/lib/site_perl/5.8.0',
+     '/usr/local/perl580/lib/site_perl',
+     '/home/simon/projects/bots/Bot-BasicBot-Pluggable-Module-Network'
+    );
+}
+
+use Module::Build;
+
+if (-e 'Build.PL' and not Module::Build->up_to_date("Build.PL", $0)) {
+   warn "Warning: Build.PL has been altered.  You may need to run 'perl Build.PL' again.\n";
+}
+
+# This should have just enough arguments to be able to bootstrap the rest.
+my $build = Module::Build->resume (
+  properties => {
+    config_dir => '/home/simon/projects/bots/Bot-BasicBot-Pluggable-Module-Network/_build',
+  },
+);
+
+$build->dispatch;

@@ -1,0 +1,13 @@
+--- #YAML:1.0
+name: Bot-BasicBot-Pluggable-Module-Search
+version: 0.8
+author: ~
+abstract: ~
+license: perl
+requires:
+  Bot::BasicBot::Pluggable: 0.1
+  Net::Traceroute: 0
+  Net::Whois: 0
+  Test::More: 0
+provides: {}
+generated_by: Module::Build version 0.25
