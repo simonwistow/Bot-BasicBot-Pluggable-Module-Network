@@ -5,7 +5,7 @@ WriteMakefile
           'NAME' => 'Bot::BasicBot::Pluggable::Module::Search',
           'VERSION' => '0.8',
           'PREREQ_PM' => {
-                           'Bot::BasicBot::Pluggable' => '0.1',
+                           'Bot::BasicBot::Pluggable' => '0.5',
                            'Net::Traceroute' => '0',
                            'Net::Whois' => '0',
                            'Test::More' => '0'

@@ -9,7 +9,7 @@ my $build = Module::Build
          dist_abstract => 'various network plugins for Bot::BasicBot::Pluggable',
          requires       => {
                           'Test::More'                     => 0,
-                          'Bot::BasicBot::Pluggable'       => '0.1',
+                          'Bot::BasicBot::Pluggable'       => '0.5',
                           'Net::Whois'                     => 0,
                           'Net::Traceroute'                => 0,
                          },
